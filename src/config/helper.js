@@ -1,11 +1,10 @@
 export function timeAgo(date) {
-  const now = Date.now(); // Current time in milliseconds since epoch (UTC)
-  const past = new Date(date).getTime(); // MongoDB date converted to milliseconds (UTC)
+  console.log(date)
+  const now = new Date();
+  const past = new Date(date);
   const secondsAgo = Math.floor((now - past) / 1000);
-
   console.log(now);
   console.log(past);
-  console.log(secondsAgo);
 
   if (secondsAgo < 60) return `${secondsAgo} seconds ago`;
   const minutesAgo = Math.floor(secondsAgo / 60);

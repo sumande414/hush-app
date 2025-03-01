@@ -97,6 +97,10 @@ const ChatPage = () => {
     navigate("/");
   }
 
+  function replaceUTCOffset(dateString) {
+    return dateString + "Z";
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-100 via-violet-50 to-white">
       {/* Updated Header */}
@@ -173,7 +177,7 @@ const ChatPage = () => {
                   <div className="flex flex-col gap-1">
                     <p className="text-sm font-semibold text-violet-600">{message.sender}</p>
                     <p className="text-gray-800">{message.content}</p>
-                    <p className="text-xs text-gray-500">{timeAgo(message.timeStamp)}</p>
+                    <p className="text-xs text-gray-500">{timeAgo(replaceUTCOffset(message.timeStamp))}</p>
                   </div>
                 </div>
               </div>
