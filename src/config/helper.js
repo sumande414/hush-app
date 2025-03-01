@@ -1,7 +1,7 @@
 export function timeAgo(date) {
-  const now = new Date();
-  const past = new Date(date);
-  const secondsAgo = Math.floor((now - past) / 1000);
+  const now = new Date().toUTCString(); // Get current time in UTC
+  const past = new Date(date); // MongoDB UTC date
+  const secondsAgo = Math.floor((new Date(now) - past) / 1000);
   console.log(now);
   console.log(past);
 
