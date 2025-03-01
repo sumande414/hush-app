@@ -2,7 +2,7 @@ export function timeAgo(date) {
   console.log(date)
   const now = new Date();
   const past = new Date(date);
-  const secondsAgo = Math.floor((now - past) / 1000);
+  const secondsAgo = Math.max(Math.floor((now - past) / 1000),0);
   console.log(now);
   console.log(past);
 
