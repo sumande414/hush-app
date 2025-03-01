@@ -1,6 +1,5 @@
 export function timeAgo(date) {
-  
-  const now = new Date();
+  const now = new Date(Date.now());
   const past = new Date(date);
   const secondsAgo = Math.floor((now - past) / 1000);
 
