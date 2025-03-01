@@ -78,13 +78,13 @@ const JoinCreateChat = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex items-center w-full max-w-6xl mx-auto">
+      <div className="relative z-10 flex flex-col md:flex-row items-center w-full max-w-6xl mx-auto gap-8">
         {/* Left Section - Title and Tagline */}
-        <div className="flex-1 pr-8">
-          <h1 className="text-6xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
+        <div className="flex-1 text-center md:text-left md:pr-8">
+          <h1 className="text-4xl sm:text-6xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
             Hush
           </h1>
-          <p className="text-violet-500 mt-2 text-xl">Connect & Chat Securely</p>
+          <p className="text-violet-500 mt-2 text-lg sm:text-xl">Connect & Chat Securely</p>
         </div>
 
         {/* Right Section - Form Container */}
@@ -124,7 +124,7 @@ const JoinCreateChat = () => {
             </div>
 
             {/* Buttons */}
-            <div className="flex gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <button
                 onClick={joinChat}
                 className="flex-1 py-3 px-4 bg-violet-500 text-white rounded-lg hover:bg-violet-600 transition-all duration-200 font-medium shadow-md hover:shadow-lg"
